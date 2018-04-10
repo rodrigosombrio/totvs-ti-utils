@@ -1,18 +1,5 @@
 'use strict';
 
-var Handlebars = require("handlebars");
-
-/**
- * Loading component
- */
-
-Handlebars.registerHelper('translate', function(string, lang) {
-  if (lang != undefined) {
-    this.translations.set(lang);
-  }
-  return new Handlebars.SafeString(this.translations[string][this.translations.language]);
-});
-
 let translations = {
   language: "pr-BR",
   set: function(value) {
